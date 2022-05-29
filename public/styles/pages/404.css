@@ -1,0 +1,33 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.not-found__image {
+  border-radius: 10px;
+}
+
+.not-found__info {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.not-found__info a {
+  background-color: gainsboro;
+  border: 10px;
+}
+
+.not-found a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .not-found__image {
+    
+    width: 250px;
+  }
+}

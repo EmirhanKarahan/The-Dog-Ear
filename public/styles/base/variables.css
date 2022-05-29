@@ -1,0 +1,9 @@
+:root {
+  --color-white: white;
+  --color-black: black;
+  --color-orangered: orangered;
+  --color-gray-300: rgb(238, 238, 238);
+  --color-gray-500: #c4c4c4;
+  --color-gray-700: #202020;
+  --height-section: 700px;
+}

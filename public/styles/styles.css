@@ -1,0 +1,18 @@
+@import "./base/normalize.css";
+@import "./base/formalize.css";
+@import "./base/variables.css";
+@import "./base/base.css";
+@import "./base/variables.css";
+
+@import "./pages/404.css";
+@import "./pages/profile.css";
+@import "./pages/details.css";
+@import "./pages/home.css";
+@import "./pages/login.css";
+@import "./pages/register.css";
+@import "./pages/search.css";
+
+@import "./partials/header.css";
+@import "./partials/footer.css";
+@import "./partials/comic.css";
+@import "./partials/settings-popup.css";

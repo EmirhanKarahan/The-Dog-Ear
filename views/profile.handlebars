@@ -1,0 +1,46 @@
+<main>
+    <div class="profile__white">
+        <div class="profile__user">
+            <img src="https://cdn-icons-png.flaticon.com/512/2178/2178102.png" alt="username" width="150px"
+                height="150px">
+            <span><b>{{user.username}}</b></span>
+        </div>
+    </div>
+    <div class="profile__black">
+        <ul>
+            <lh>
+                <h3>plan to read</h3>
+            </lh>
+            {{#each plantoread}}
+            <li> <a href="/comic/{{this.comicId}}">{{this.comicName}}</a></li>
+            {{/each }}
+            {{#unless plantoread}}
+            <li>there is no planned read</li>
+            {{/unless }}
+        </ul>
+        <ul>
+            <lh>
+                <h3>reading</h3>
+            </lh>
+            {{#each reading}}
+            <li> <a href=" /comic/{{this.comicId}}">{{this.comicName}}</a></li>
+            {{/each }}
+            {{#unless reading}}
+            <li>currently reading is empty</li>
+            {{/unless }}
+
+        </ul>
+        <ul>
+            <lh>
+                <h3>finished</h3>
+            </lh>
+            {{#each finished}}
+            <li> <a href="/comic/{{this.comicId}}">{{this.comicName}}</a></li>
+            {{/each }}
+            {{#unless finished}}
+            <li>nothing is finished :(</li>
+            {{/unless }}
+        </ul>
+
+    </div>
+</main>

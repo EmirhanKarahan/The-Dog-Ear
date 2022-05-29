@@ -1,0 +1,26 @@
+.search__first-section {
+  position: relative;
+  min-height: var(--height-section);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/martijn-baudoin.jpeg");
+  background-color: var(--color-gray-700);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.search__container {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+}
+
+.search__results-title {
+  color: var(--color-white);
+}
+
+.search__results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

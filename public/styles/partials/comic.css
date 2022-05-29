@@ -1,0 +1,13 @@
+.comic {
+  margin: 2rem;
+}
+
+.comic__text {
+  color: var(--color-white);
+}
+
+@media (max-width: 768px) {
+  .comic {
+    margin: 10px;
+  }
+}

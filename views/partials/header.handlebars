@@ -1,0 +1,24 @@
+<header class="header">
+
+    <div class="header__logo">
+        <a href="/">
+            <img src="/img/dog-paw.png" width="50px" alt="The Dog Ear's logo">
+            <span>The Dog Ear</span>
+        </a>
+    </div>
+
+    <nav class="header__nav">
+        {{#if loggedIn}}
+        <a id="nav-button">Account ▼</a>
+        <div class="header__nav-popup">
+            <a href="/profile">profile</a>
+            <a id="settings-button">settings</a>
+            <a href="/logout">logout</a>
+        </div>
+        {{/if}}
+        {{#unless loggedIn}}
+        <a href="/login">Login/Sign Up</a>
+        {{/unless}}
+    </nav>
+
+</header>

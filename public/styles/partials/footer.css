@@ -1,0 +1,26 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  background-color: var(--color-black);
+  justify-content: center;
+  align-items: center;
+  font-family: "Bangers", "Inter", sans-serif, cursive;
+  letter-spacing: 0.2rem;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.footer__socials a + a {
+  margin-left: 1rem;
+}
+
+.footer__text {
+  text-align: center;
+  color: var(--color-white);
+}

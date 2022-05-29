@@ -1,0 +1,153 @@
+.home__first-section {
+  position: relative;
+  min-height: var(--height-section);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/martijn-baudoin.jpeg");
+  background-color: var(--color-gray-700);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.home__search {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 50px;
+  padding-left: 20px;
+  border: solid 5px black;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.home__search:focus {
+  outline: none;
+  border: solid 5px var(--color-orangered);
+}
+
+.home__get-some {
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-orangered);
+}
+
+.home__recommendations {
+  display: flex;
+  overflow: scroll;
+}
+
+.home__second-section h3 {
+  margin-left: 2rem;
+}
+
+.home__second-section hr {
+  width: 80%;
+  height: 4px;
+  border: none;
+  background-color: var(--color-orangered);
+}
+
+.home__recommendations::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.home__recommendations {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.home__second-section {
+  min-height: var(--height-section);
+  background-color: var(--color-gray-700);
+  color: var(--color-white);
+  padding-top: 1rem;
+}
+
+.home__third-section {
+  min-height: var(--height-section);
+  background-color: black;
+}
+
+.home__form-container {
+  max-width: 500px;
+  padding-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home__form-container h3 {
+  color: var(--color-orangered);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.home__form-container h4 {
+  color: var(--color-white);
+  font-size: 1.5rem;
+}
+
+.home__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.home__input-container {
+  margin-top: 20px;
+}
+
+.home__input-container label {
+  display: inline-block;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  width: 5rem;
+}
+
+.home__input-container select {
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.home__input-container input[type="radio"] {
+  transform: scale(2);
+  margin-right: 5px;
+}
+
+.home__form-button {
+  width: 100px;
+  height: 50px;
+  border: none;
+  background-color: var(--color-orangered);
+  color: var(--color-white);
+  border-radius: 5px;
+  margin-top: 15px;
+}
+
+@media (max-width: 768px) {
+  .home__first-section {
+    min-height: 600px;
+  }
+
+  .home__search {
+    width: 250px;
+    font-size: 1.2rem;
+    padding-left: 10px;
+    height: 35px;
+  }
+
+  .home__second-section h3 {
+    margin-left: 10px;
+  }
+
+  .home__third-section {
+    min-height: 500px;
+  }
+
+  .home__form-container {
+    margin-left: 2rem;
+  }
+}

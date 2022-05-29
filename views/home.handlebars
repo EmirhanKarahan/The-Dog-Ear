@@ -1,0 +1,82 @@
+<main>
+    <section class="home__first-section">
+        <form id="search-form" action="/search" method="post"> <input id="home-search" class="home__search" autofocus
+                placeholder="search comics" type="text" name="search"></form>
+
+    </section>
+    <section class="home__second-section">
+        {{#if loggedIn}}
+        <h3>recommendations based on your stars</h3>
+        {{/if }}
+        {{#unless loggedIn}}
+        <h3>featured comic books</h3>
+        {{/unless }}
+
+        <div class="home__recommendations">
+            {{#unless featuredComics}}
+            <div class="home__get-some">
+                <h3>add some comics to your list to get some recommendations</h3>
+            </div>
+            {{/unless }}
+            {{#each featuredComics}}
+            {{> comic this}}
+            {{/each}}
+        </div>
+        <hr>
+        <h3>lastly added</h3>
+        <div class="home__recommendations">
+            {{#each lastlyAdded}}
+            {{> comic this}}
+            {{/each}}
+        </div>
+    </section>
+    <section class="home__third-section">
+
+        <div class="home__form-container" id="search">
+            <a href="#search"></a>
+            <h3>SEARCH</h3>
+            <h4>Let's find it</h4>
+
+            <form class="home__form" action="/" method="post">
+
+                <div class="home__input-container">
+                    <label for="">Type:</label>
+                    <input type="radio" name="type" value="Cartoon" id="cartoon">
+                    <label for="cartoon">Cartoon</label>
+                    <input type="radio" name="type" value="Manga" id="manga">
+                    <label for="manga">Manga</label>
+                </div>
+
+                <div class="home__input-container">
+                    <label for="genre">Genre:</label>
+                    <select name="genre" id="genre">
+                        <option value="Action">Action</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Horror">Horror</option>
+                    </select>
+                </div>
+
+                <div class="home__input-container">
+                    <label for="sort">Sort by:</label>
+                    <select name="sort" id="sort">
+                        <option value="dateAdded">Date Added</option>
+                        <option value="pages">Pages</option>
+                    </select>
+                </div>
+
+                <button class="home__form-button">Search</button>
+
+            </form>
+
+        </div>
+        <div class="home__recommendations">
+            {{#each searchResults}}
+            {{> comic this}}
+            {{/each}}
+        </div>
+    </section>
+</main>

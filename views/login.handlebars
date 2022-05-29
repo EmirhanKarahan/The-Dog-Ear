@@ -1,0 +1,14 @@
+{{#if errorFlash}}
+<div class="login__flash">Wrong input, please try again</div>
+{{/if}}
+<main class="login">
+    <form action="/login" method="post" class="login-form">
+        <span>Welcome to the world of comic books</span>
+        <label for="email">Email</label>
+        <input name="email" id="email" type="text">
+        <label for="password">Password</label>
+        <input name="password" id="password" type="password">
+        <a href="/register">Don't you have an account?</a>
+        <button>Login</button>
+    </form>
+</main>

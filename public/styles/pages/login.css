@@ -1,0 +1,59 @@
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/img/waldemar-brandt.jpeg");
+  background-color: var(--color-gray-700);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+.login__flash {
+  display: fixed;
+  background-color: white;
+  top: 0;
+  left: 50%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  color: var(--color-orangered);
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-gray-300);
+  width: 400px;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  border-radius: 5px;
+}
+
+.login-form > input {
+  padding: 0.5rem;
+}
+
+.login-form > button {
+  width: 90px;
+  height: 50px;
+  margin-top: 10px;
+  float: right;
+  border-radius: 5px;
+  color: var(--color-white);
+  font-weight: bold;
+  background-color: var(--color-orangered);
+}
+
+.login-form > a {
+  text-decoration: underline;
+}
+
+.login-form > span {
+  font-weight: bold;
+}

@@ -1,0 +1,76 @@
+<main class="details-container">
+    <div class="details">
+        <h1>{{comic.name}}</h1>
+        <div class="details__comic">
+            <div>
+                <img width="325px" loading="lazy" height="465px" src={{comic.imageUrl}} alt="doctor strange"
+                    class="details__img">
+                <div class="details__rating">
+                    ⭐️{{comicStars}}/10</div>
+                {{#if loggedIn}}
+                <form method="post">
+                    <label for="status">Status</label>
+                    <select name="status" id="status">
+                        <option value="{{status}}" hidden="hidden" selected>{{status}}</option>
+                        <option value="none">none</option>
+                        <option value="plantoread">plan to read</option>
+                        <option value="reading">reading</option>
+                        <option value="finished">finished</option>
+                    </select>
+                    <label for="stars">Stars</label>
+                    <select name="stars" id="stars">
+                        <option value="{{stars}}" hidden="hidden" selected>{{stars}}</option>
+                        <option value="10">(10) Masterpiece</option>
+                        <option value="9">(9) Great</option>
+                        <option value="8">(8) Very Good</option>
+                        <option value="7">(7) Good</option>
+                        <option value="6">(6) Fine</option>
+                        <option value="5">(5) Average</option>
+                        <option value="4">(4) Bad</option>
+                        <option value="3">(3) Very Bad</option>
+                        <option value="2">(2) Horrible</option>
+                        <option value="1">(1) Appalling</option>
+                    </select>
+                    <div>
+                        <button type="submit" class="update-button">Update</button>
+                    </div>
+
+                </form>
+                {{/if }}
+                {{#unless loggedIn}}
+                Login to rate this comic book
+                {{/unless }}
+            </div>
+
+            <table class="details__table">
+                <tr>
+                    <th>Name:</th>
+                    <td>{{comic.name}}</td>
+                </tr>
+                <tr>
+                    <th>Publisher:</th>
+                    <td>{{comic.publisher}}</td>
+                </tr>
+                <tr>
+                    <th>Type:</th>
+                    <td>{{comic.type}}</td>
+                </tr>
+                <tr>
+                    <th>Pages:</th>
+                    <td>{{comic.pages}}</td>
+                </tr>
+                <tr>
+                    <th>Genre:</th>
+                    <td>
+                        {{comic.genre}}
+                    </td>
+                </tr>
+                <tr>
+                    <th>Author:</th>
+                    <td>{{comic.author}}</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+</main>

@@ -1,0 +1,27 @@
+<div class="settings-popup" id="settings-popup">
+    <button class="settings-pop__quit" id="quit-button">X</button>
+    <h3>Settings</h3>
+    <form class="settings-popup__form" action="/update-user" method="post">
+        <div>
+            <label for="">username</label>
+            <input placeholder="{{user.username}}" disabled type="text" readonly>
+        </div>
+        <div>
+            <label for="">mail</label>
+            <input placeholder="{{user.email}}" value="{{user.email}}" readonly disabled type="email" readonly
+                name="email">
+        </div>
+        <div>
+            <label for="">password</label>
+            <input placeholder="******" type="password" name="password">
+        </div>
+        <div>
+            <label for="">new password</label>
+            <input type="password" name="newpassword">
+        </div>
+        <div>
+            <button>Apply</button>
+        </div>
+
+    </form>
+</div>

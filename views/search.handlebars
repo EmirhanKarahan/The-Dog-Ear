@@ -1,0 +1,22 @@
+<main class="search__first-section">
+
+
+    <section class="search__first-section">
+        <div class="search__container">
+            {{#if searchedComics}}
+            <h2 class="search__results-title">Here is your search results:</h2>
+
+            <div class="search__results">
+                {{#each searchedComics}}
+                {{> comic this}}
+                {{/each}}
+            </div>
+            {{/if }}
+            {{#unless searchedComics}}
+            <h2 class="search__results-title">We couldn't find anything. Please, go back</h2>
+            {{/unless }}
+        </div>
+
+    </section>
+
+</main>
